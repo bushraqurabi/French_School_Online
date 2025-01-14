@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="all.min.css">
+    <title>Bonjour Kids</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="#" class="logo">
+                <img src="images/K8Wc2XGS.png" alt="Logo">
+            </a>
+            <div class="icon">
+                <span>Bonjour</span>
+                <span>Kids</span>
+            </div>
+        </div>
+        <div class="icon-group">
+            <i class="fas fa-search" onclick="showbar()" id="search-btn"></i>
+            <i class="fas fa-user" onclick="showform()"></i>
+        </div>
+        <form action="search" class="search-form">
+            <input type="search" id="search-bar" placeholder="What you looking for...">
+            <button type="submit" class="search-button">Search</button>
+        </form>
+    </header>
+
+
+
+    <nav class="menu">
+        <ul>
+            <li><a href="#"><i class="fas fa-user"></i>
+                    <p>الملف الشخصي</p>
+                </a></li>
+
+            <li><a href="index.html"><i class="fa-solid fa-book-open"></i>
+                    <p>تعليم المفردات</p>
+                </a></li>
+            <li><a href="#"><i class="fa-solid fa-music"></i>
+                    <p>الأغاني التعليمية</p>
+                </a></li>
+            <li><a href="Subpage2.html"><i class="fa-solid fa-video"></i>
+                    <p>الفيديوهات التعليمية</p>
+                </a></li>
+            <li><a href="#"><i class="fa-brands fa-slack"></i>
+                    <p>حول الموقع</p>
+                </a></li>
+            <li class="log-out"><a href="#"><i class="fa-solid fa-person-running"></i>
+                    <p>الخروج</p>
+                </a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+
+        <img src="images/Untitled-1.avif" alt="Main Image" onclick="window.location.href='target-page.html'">
+
+    </div>
+
+
+    <div class="links-section">
+        <div class="link-item">
+            <a href="index.html">
+                <img src="images/3.avif" alt="Videos">
+                <p>تعلم المفردات </p>
+            </a>
+        </div>
+        <div class="link-item">
+            <a href="Subpage2.html">
+                <img src="images/Untitled-2.avif" alt="Vocabulary">
+                <p> تعلم بمشاهدة الفيديو </p>
+            </a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Bonjour Kids. All Rights Reserved.</p>
+        <p>تواصل معنا عبر:</p>
+        <p>هاتف: +123456789 | بريد إلكتروني: <a href="mailto:support@bonjourkids.com">support@bonjourkids.com</a></p>
+        <div class="social-icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+        <p>اقتراحات؟ <a href="#">شاركنا أفكارك</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

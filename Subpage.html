@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulaire en Français</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #2c3e50;
+            background-color: #d1e8ff;
+            padding: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        h1:hover {
+            transform: scale(1.05);
+            background-color: #b8d7ff;
+        }
+
+        p {
+            text-align: center;
+            color: #555;
+            background-color: #fef3d9;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 10px 20px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        p:hover {
+            transform: scale(1.05);
+            background-color: #ffe8af;
+        }
+
+        .intro-image {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 1200px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .section img.intro-section {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border: 5px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .section img.intro-section:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .image-gallery img {
+            width: calc(100% / 3 - 20px);
+            height: auto;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .tooltip {
+            position: absolute;
+            background-color: #333;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>باللغة الفرنسية</h1>
+    <p>استكشف المفردات وتعلم بالصور.</p>
+
+    <!-- قسم العائلة -->
+    <div class="section">
+        <h2>العائلة (La Famille)</h2>
+
+        <div class="image-gallery">
+            <img src="images/FAMILY/1.jpg" alt="Famille" data-word="Mère (أم)">
+            <img src="images/FAMILY/2.jpg" alt="Mère" data-word="Père (أب)">
+            <img src="images/FAMILY/5.jpg" alt="Père" data-word="Frère (أخ)">
+        </div>
+    </div>
+
+    <!-- قسم الطعام -->
+    <div class="section">
+        <h2>الطعام (La Nourriture)</h2>
+
+        <div class="image-gallery">
+            <img src="images/Food/11.jpg" alt="Pain" data-word="Cerise (كرزة)">
+            <img src="images/Food/12.jpg" alt="Fromage" data-word="Pomme (تفاحة)">
+            <img src="images/Food/13.jpg" alt="Poisson" data-word="Freeze (فريزة)">
+        </div>
+    </div>
+
+    <!-- قسم المدرسة -->
+    <div class="section">
+        <h2>المدرسة (Les Fournitures Scolaires)</h2>
+
+        <div class="image-gallery">
+            <img src="images/School/4.jpg" alt="École" data-word="Paramètre (جلسة)">
+            <img src="images/School/6.jpg" alt="Livre" data-word="Livre (كتاب)">
+            <img src="images/School/IMG-20241203-WA0059.jpg" alt="Crayon" data-word="Tableau (سبورة)">
+        </div>
+    </div>
+
+    <!-- قسم الألوان -->
+    <div class="section">
+        <h2>الألوان (Les Couleurs)</h2>
+
+        <div class="image-gallery">
+            <img src="images/Colors/10.jpg" alt="Rouge" data-word="Vert (أخضر)">
+            <img src="images/Colors/9.jpg" alt="Bleu" data-word="Bleu (أزرق)">
+            <img src="images/Colors/8.jpg" alt="Vert" data-word="Rouge (أحمر)">
+        </div>
+    </div>
+
+    <script>
+        const images = document.querySelectorAll('.image-gallery img');
+
+        images.forEach(img => {
+            img.addEventListener('mouseover', () => {
+                const tooltip = document.createElement('div');
+                tooltip.className = 'tooltip';
+                tooltip.innerText = img.dataset.word;
+                document.body.appendChild(tooltip);
+
+                img.addEventListener('mousemove', (e) => {
+                    tooltip.style.left = `${e.pageX + 10}px`;
+                    tooltip.style.top = `${e.pageY + 10}px`;
+                    tooltip.style.opacity = '1';
+                });
+
+                img.addEventListener('mouseout', () => {
+                    tooltip.remove();
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

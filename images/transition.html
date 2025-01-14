@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de Vocabulaire Interactive</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #2c3e50;
+        }
+
+        p {
+            text-align: center;
+            color: #555;
+        }
+
+        .intro-image {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 1200px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .image-gallery a {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .image-gallery a:hover img {
+            transform: scale(1.05);
+        }
+
+        .image-gallery a:hover {
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .tooltip {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: opacity 0.3s;
+            opacity: 0;
+        }
+
+        .image-gallery a:hover .tooltip {
+            opacity: 1;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Bienvenue à la page de vocabulaire interactive</h1>
+    <p>Explorez différents domaines avec des images interactives.</p>
+
+    <!-- صورة تعريفية -->
+    <img src="images/intro.jpg" alt="Introduction" class="intro-image">
+
+    <!-- عرض الصور التي تؤدي إلى صفحات أخرى -->
+    <div class="section">
+        <h2>Explorez les domaines</h2>
+        <div class="image-gallery">
+            <a href="Untitled-1.avif">
+                <img src="images/vocabulaire.jpg" alt="Vocabulaire">
+                <div class="tooltip">Vocabulaire (المفردات)</div>
+            </a>
+            <a href="couleurs.html">
+                <img src="images/colors.avif" alt="Couleurs">
+                <div class="tooltip">Couleurs (الألوان)</div>
+            </a>
+            <a href="ecole.html">
+                <img src="images/school.avif" alt="École">
+                <div class="tooltip">Fournitures Scolaires (الأدوات المدرسية)</div>
+            </a>
+            <a href="nourriture.html">
+                <img src="images/food.jpg" alt="Nourriture">
+                <div class="tooltip">Nourriture (الطعام)</div>
+            </a>
+            <a href="famille.html">
+                <img src="images/family.avif" alt="Famille">
+                <div class="tooltip">Famille (العائلة)</div>
+            </a>
+        </div>
+    </div>
+
+</body>
+
+</html>

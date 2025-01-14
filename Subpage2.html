@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعليم اللغة الفرنسية</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: center;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: #2a9df4;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px #999;
+            transition: color 0.3s;
+        }
+
+        h1:hover {
+            color: #0a7fc1;
+        }
+
+        p {
+            color: #444;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            width: 70%;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #444;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 3px #bbb;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        h2:hover {
+            transform: scale(1.1);
+            color: #007bff;
+        }
+
+        .video-section {
+            margin-bottom: 40px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+        }
+
+        .video-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .video-container {
+            width: 200px;
+            cursor: pointer;
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .video-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-container img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        .play-button:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .play-button::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-left: 15px solid white;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+        }
+
+        p.video-description {
+            text-align: center;
+            margin-top: 8px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>فيديوهات تعليم اللغة الفرنسية</h1>
+    <p>فيما يلي مجموعة من الفيديوهات المفيدة لتعلم اللغة الفرنسية، مقسمة حسب المواضيع. يمكنكم النقر على أي فيديو لتشغيله
+        مباشرة.</p>
+
+    <!-- قسم الحروف -->
+    <div class="video-section">
+        <h2>الحروف</h2>
+        <div class="video-gallery">
+            <div class="video-container" onclick="playVideo('video/letters P1.MP4')">
+                <img src="images/3.avif" alt="فيديو الحروف الجزء الأول">
+                <div class="play-button"></div>
+                <p class="video-description">فيديو الحروف - الجزء الأول</p>
+            </div>
+            <div class="video-container" onclick="playVideo('video/حروف جزء2.MP4')">
+                <img src="images/School/school.avif" alt="فيديو الحروف الجزء الثاني">
+                <div class="play-button"></div>
+                <p class="video-description">فيديو الحروف - الجزء الثاني</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- قسم الأرقام -->
+    <div class="video-section">
+        <h2>الأرقام</h2>
+        <div class="video-gallery">
+            <div class="video-container" onclick="playVideo('video/ارقام.MP4')">
+                <img src="images/School/IMG-20241203-WA0059.jpg" alt="فيديو الأرقام">
+                <div class="play-button"></div>
+                <p class="video-description">فيديو الأرقام</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- قسم الألوان -->
+    <div class="video-section">
+        <h2>الألوان</h2>
+        <div class="video-gallery">
+            <div class="video-container" onclick="playVideo('video/الوان.MP4')">
+                <img src="images/Colors/8.jpg" alt="فيديو الألوان">
+                <div class="play-button"></div>
+                <p class="video-description">فيديو الألوان</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- قسم المهن -->
+    <div class="video-section">
+        <h2>المهن</h2>
+        <div class="video-gallery">
+            <div class="video-container" onclick="playVideo('video/مهن.MP4')">
+                <img src="images/School/4.jpg" alt="فيديو المهن">
+                <div class="play-button"></div>
+                <p class="video-description">فيديو المهن</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function playVideo(videoPath) {
+            const videoElement = document.createElement('video');
+            videoElement.src = videoPath;
+            videoElement.controls = true;
+            videoElement.autoplay = true;
+            videoElement.style.position = 'fixed';
+            videoElement.style.top = '50%';
+            videoElement.style.left = '50%';
+            videoElement.style.transform = 'translate(-50%, -50%)';
+            videoElement.style.zIndex = '1000';
+            videoElement.style.backgroundColor = '#000';
+
+            const overlay = document.createElement('div');
+            overlay.style.position = 'fixed';
+            overlay.style.top = '0';
+            overlay.style.left = '0';
+            overlay.style.width = '100%';
+            overlay.style.height = '100%';
+            overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+            overlay.style.zIndex = '999';
+
+            const closeButton = document.createElement('div');
+            closeButton.textContent = '×';
+            closeButton.style.position = 'fixed';
+            closeButton.style.top = '10px';
+            closeButton.style.right = '10px';
+            closeButton.style.fontSize = '30px';
+            closeButton.style.cursor = 'pointer';
+            closeButton.style.zIndex = '1001';
+            closeButton.style.color = '#fff';
+
+            closeButton.onclick = () => {
+                document.body.removeChild(videoElement);
+                document.body.removeChild(overlay);
+                document.body.removeChild(closeButton);
+            };
+
+            overlay.onclick = () => {
+                document.body.removeChild(videoElement);
+                document.body.removeChild(overlay);
+                document.body.removeChild(closeButton);
+            };
+
+            document.body.appendChild(overlay);
+            document.body.appendChild(videoElement);
+            document.body.appendChild(closeButton);
+        }
+    </script>
+</body>
+
+</html>

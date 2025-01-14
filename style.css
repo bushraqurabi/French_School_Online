@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: inline;
+}
+
+
+/* تعديل ألوان الهيدر */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #002b7f, #ffffff, #ff0000);
+    /* ألوان العلم الفرنسي */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* تصميم الشعار */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.icon {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* تصميم مجموعة الأيقونات */
+.icon-group {
+    display: flex;
+    gap: 15px;
+}
+
+.icon-group i {
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon-group i:hover {
+    transform: scale(1.2);
+    color: #ff0000;
+}
+
+/* تحسين مظهر شريط البحث */
+.search-form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#search-bar {
+    padding: 10px;
+    border: 2px solid #ffffff;
+    border-radius: 25px;
+    outline: none;
+    font-size: 1rem;
+    width: 200px;
+    transition: width 0.4s ease, border-color 0.3s ease;
+}
+
+#search-bar:focus {
+    width: 300px;
+    border-color: #ff0000;
+}
+
+.search-button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #002b7f;
+    color: white;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #ff0000;
+    transform: scale(1.1);
+}
+
+/* تحسين النص */
+p {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    color: #eaf1f6;
+    line-height: 1.6;
+    text-align: justify;
+    text-transform: capitalize;
+    margin: 10px 0;
+}
+
+.main-content {
+    display: flex;
+    /* يتيح التحكم في المحاذاة */
+    justify-content: center;
+    /* يجعل الصورة في منتصف الصفحة أفقيًا */
+    align-items: center;
+    /* يجعل الصورة في منتصف القسم عموديًا (إذا لزم الأمر) */
+    width: 100%;
+    /* تغطي عرض القسم */
+    padding: 20px 0;
+    /* إضافة مساحة حول الصورة */
+    background-color: #f4f4f4;
+    /* لون خلفية لطيف للتباين */
+}
+
+.main-content img {
+    width: 80%;
+    /* عرض الصورة بالنسبة لحجم الصفحة */
+    max-width: 1200px;
+    /* الحد الأقصى لعرض الصورة */
+    height: auto;
+    /* يحافظ على نسب العرض إلى الارتفاع */
+    border-radius: 10px;
+    /* زوايا مستديرة */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* تأثير الظل */
+    transition: transform 0.3s ease;
+    /* تأثير التكبير عند التمرير */
+}
+
+.main-content img:hover {
+    transform: scale(1.05);
+    /* تكبير بسيط عند التمرير */
+}
+
+
+nav.menu {
+    background-color: #0055a4;
+}
+
+nav.menu ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+nav.menu ul li {
+    text-align: center;
+}
+
+nav.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+nav.menu ul li a:hover {
+    background-color: #ef4135;
+    color: #fff;
+}
+
+.main-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.main-content img {
+    width: 90%;
+    max-width: 800px;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: block;
+}
+
+.links-section {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto;
+    flex-wrap: wrap;
+    max-width: 800px;
+    background-color: #f3ebeb;
+}
+
+.links-section .link-item {
+    margin: 10px;
+    text-align: center;
+}
+.links-section .link-item p{
+    color: #000711;
+}
+
+.links-section .link-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    color: #000;
+}
+
+.links-section .link-item img:hover {
+    transform: scale(1.1);
+}
+footer {
+    background: linear-gradient(to right, #002b7f, #ffffff, #ff0000); /* ألوان العلم الفرنسي */
+    text-align: center;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+footer p {
+    margin: 10px 0;
+    text-align: center;
+    color: #000;
+}
+
+footer a {
+    color: #95312f; /* لون الروابط */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .social-icons {
+    margin: 20px 0;
+}
+
+footer .social-icons i {
+    margin: 0 15px;
+    font-size: 28px;
+    color: #333; /* لون الأيقونات */
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+footer .social-icons i:hover {
+    color: #0055A4; /* تغيير اللون عند التمرير */
+}
+
+
