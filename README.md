@@ -1,4 +1,4 @@
-# 🇫🇷 Bonjour Kids – French School Online
+#  Bonjour Kids – French School Online
 
 **An interactive and colorful front-end website for teaching French to children using vocabulary, videos, and educational songs.**
 
